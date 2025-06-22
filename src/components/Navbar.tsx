@@ -55,7 +55,7 @@ const Navbar = ({ isDark, toggleDarkMode }: NavbarProps) => {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="flex justify-between items-center fixed top-0 inset-x-0 mx-auto py-2 bg-white dark:bg-neutral-950 z-50"
+        className="flex justify-between items-center fixed top-0 inset-x-0 mx-auto py-2 bg-white dark:bg-neutral-950 glasmo z-50"
       >
         <img
           src="profile_image.jpg"

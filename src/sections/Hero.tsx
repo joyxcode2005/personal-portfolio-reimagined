@@ -1,9 +1,10 @@
-import { isDragActive, motion } from "motion/react";
+import {  motion } from "motion/react";
 import { nameElements } from "../constant";
-import Background3D from "../components/Background3D";
+import ThreeDModal from "../components/ThreeDModal";
+import AnimatingText from "../components/AnimatingText";
 const Hero = ({ isDark }: { isDark: boolean }) => {
   return (
-    <section className="mt-15 px-4 grid grid-cols-1 md:grid-cols-2 h-[55%] items-center justify-center">
+    <section className="mt-30 px-4 grid grid-cols-1 md:grid-cols-2 h-[55%] items-center justify-center">
       <div className="z-2">
         <motion.h1
           initial={{
@@ -52,16 +53,16 @@ const Hero = ({ isDark }: { isDark: boolean }) => {
             opacity: 1,
             y: 0,
           }}
-          className="font-fira-code mt-4 text-sm text-gray-600 dark:text-neutral-400"
+          className="font-fira-code mt-4 text-sm text-gray-600 dark:text-neutral-400 "
         >
-          I'm a passionate full-stack developer with a strong foundation in
-          building scalable, efficient, and user-centric web applications. I
-          enjoy bridging the gap between elegant frontend design and robust
-          backend architecture.
+          I'm a passionate <AnimatingText /> driven by the thrill of crafting
+          scalable, high-performance, and user-centric web applications —
+          blending clean code, thoughtful design, and robust architecture into
+          every project.
         </motion.p>
       </div>
-      <div className="relative w-full h-full">
-        <Background3D isDark={isDark} />
+      <div className="relative w-full h-full cursor-grab">
+        <ThreeDModal isDark={isDark} />
       </div>
     </section>
   );

@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "./components/Container";
+import Projects from "./sections/Projects";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div
-      className="transition-colors duration-300 ease-in-out min-h-screen flex items-start justify-start dark:bg-neutral-900"
+      className="transition-colors duration-300 ease-in-out min-h-screen flex items-start justify-start dark:bg-[#161717] h-auto"
       style={{
         backgroundImage: `${
           isDark
@@ -37,12 +38,13 @@ function App() {
     >
       <Container
         className={clsx(
-          "h-screen bg-white dark:bg-neutral-950 p-6",
+          "min-h-screen bg-white dark:bg-neutral-950 p-6",
           "shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
         )}
       >
         <Navbar isDark={isDark} toggleDarkMode={handleDarkModeToggle} />
         <Hero isDark={isDark} />
+        <Projects />
       </Container>
     </div>
   );

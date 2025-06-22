@@ -9,7 +9,7 @@ const Container = ({
 }) => {
   return <div className={
     clsx(
-      "max-w-4xl mx-auto", className,
+      "max-w-4xl mx-auto h-auto", className,
     )
   }>{children}</div>;
 };

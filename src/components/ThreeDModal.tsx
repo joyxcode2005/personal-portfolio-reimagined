@@ -20,12 +20,48 @@ function RubiksCubePiece({ position, faceColors }) {
   // Create materials for each face
   const materials = useMemo(() => {
     return [
-      new THREE.MeshStandardMaterial({ color: faceColors.right }), // Right face
-      new THREE.MeshStandardMaterial({ color: faceColors.left }), // Left face
-      new THREE.MeshStandardMaterial({ color: faceColors.top }), // Top face
-      new THREE.MeshStandardMaterial({ color: faceColors.bottom }), // Bottom face
-      new THREE.MeshStandardMaterial({ color: faceColors.front }), // Front face
-      new THREE.MeshStandardMaterial({ color: faceColors.back }), // Back face
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.right,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.left,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.top,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.bottom,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.front,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: faceColors.back,
+        roughness: 0.5,
+        metalness: 0.4,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.2,
+      }),
     ];
   }, [faceColors]);
 
@@ -132,7 +168,7 @@ function RubiksCube({ isDark }: { isDark: boolean }) {
   );
 }
 
-const Background3D = ({ isDark }: { isDark: boolean }) => {
+const ThreeDModal = ({ isDark }: { isDark: boolean }) => {
   return (
     <div className="absolute inset-0 mx-auto pointer-events-none flex items-center">
       {/* Left side cube container */}
@@ -157,14 +193,11 @@ const Background3D = ({ isDark }: { isDark: boolean }) => {
           <RubiksCube isDark={isDark} />
 
           {/* Subtle camera controls */}
-          <OrbitControls
-            autoRotate={true}
-            autoRotateSpeed={0.5}
-          />
+          <OrbitControls autoRotate={true} autoRotateSpeed={0.5} />
         </Canvas>
       </div>
     </div>
   );
 };
 
-export default Background3D;
+export default ThreeDModal;

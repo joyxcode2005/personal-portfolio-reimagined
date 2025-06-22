@@ -13,3 +13,10 @@ export const nameElements = [
   "a",
   ",",
 ];
+export const titles = [
+  "Fullstack Developer",
+  "UI/UX Designer",
+  "Problem Solver",
+  "Creative Thinker",
+  "DSA Geek",
+]

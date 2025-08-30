@@ -13,18 +13,17 @@ interface CardProps {
   idx: number;
 }
 
-const Card = ({ title, liveLink, codeLink, bgImgLink, desc, idx }: CardProps) => {
+const Card = ({
+  title,
+  liveLink,
+  codeLink,
+  bgImgLink,
+  desc,
+  idx,
+}: CardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if(latest > 25 +  idx * 10 ) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  });
 
   return (
     <motion.div
@@ -35,23 +34,15 @@ const Card = ({ title, liveLink, codeLink, bgImgLink, desc, idx }: CardProps) =>
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-
       initial={{
         opacity: 0,
-        x: -10,
-        rotate: -5,
+        y: 10,
       }}
-      
       animate={{
-        opacity: isScrolled ? 1 : 0,
-        x: isScrolled ? 0: -10,
-        rotate: isScrolled ? 0 : -5,
+        opacity: 1,
+        y: 0,
       }}
-
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
+      transition={{ duration: 1.5, delay: 0.2 }}
     >
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/50 rounded-lg"></div>

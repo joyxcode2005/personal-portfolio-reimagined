@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "./components/Container";
 import Projects from "./sections/Projects";
-import AnimatedMarquee from "./components/AnimatedMarquee";
+import Skills from "./sections/Skills";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -45,8 +45,8 @@ function App() {
       >
         <Navbar isDark={isDark} toggleDarkMode={handleDarkModeToggle} />
         <Hero isDark={isDark} />
-        <AnimatedMarquee />
         <Projects />
+        <Skills />
       </Container>
     </div>
   );

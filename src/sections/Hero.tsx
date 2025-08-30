@@ -2,6 +2,9 @@ import {  motion } from "motion/react";
 import { nameElements } from "../constant";
 import ThreeDModal from "../components/ThreeDModal";
 import AnimatingText from "../components/AnimatingText";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa6";
+
 const Hero = ({ isDark }: { isDark: boolean }) => {
   return (
     <section className="mt-30 px-4 grid grid-cols-1 md:grid-cols-2 h-[55%] items-center justify-center">
@@ -60,6 +63,14 @@ const Hero = ({ isDark }: { isDark: boolean }) => {
           blending clean code, thoughtful design, and robust architecture into
           every project.
         </motion.p>
+        <div className="flex gap-4">
+          <button className="mt-6 px-6 py-2 bg-transparent text-black, dark:text-white shadow-2xl border-2 hover:border-white dark:hover:border-black rounded-md hover:bg-green-500 dark:hover:bg-green-500 transition-colors duration-300 flex items-center gap-2 justify-between cursor-pointer">
+            Download Resume <FaDownload className="w-5 h-5" />
+          </button>
+          <button className="mt-6 px-6 py-2 bg-green-500 dark:bg-green-400 text-white rounded-md hover:bg-transparent  transition-colors duration-300 flex items-center gap-2 justify-between border-2 dark:border-black border-white hover cursor-pointer hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white">
+            Contact Me <FaArrowCircleRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
       <div className="relative w-full h-full cursor-grab">
         <ThreeDModal isDark={isDark} />

@@ -1,3 +1,10 @@
+import project1 from "./assets/projects/project1.jpeg";
+import project2 from "./assets/projects/project2.png";
+import project3 from "./assets/projects/project3.png";
+import project4 from "./assets/projects/project4.png";
+import project5 from "./assets/projects/project5.png";
+import project6 from "./assets/projects/project6.png";
+
 export const navLinks = ["About", "Snippets", "Contact", "Blogs"];
 export const nameElements = [
   "J",
@@ -28,7 +35,7 @@ export const projects = [
     desc: "AI powered coding contest platform where users can solve problems and they are scored based on time, space complexity and readibility.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project2,
   },
   {
     id: 2,
@@ -36,7 +43,7 @@ export const projects = [
     desc: "This is a blogging website where the backend is based on serverless architecture using hono and primsa + postgress.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project5,
   },
   {
     id: 3,
@@ -44,7 +51,7 @@ export const projects = [
     desc: "This is a AI tutor platform where students can come and learn, quiz and chat personalized according to their syllabus.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project6,
   },
   {
     id: 4,
@@ -52,7 +59,7 @@ export const projects = [
     desc: "This is a course selling website similar to coursera and udemy. Build using react + express + mongodb.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project4,
   },
   {
     id: 5,
@@ -60,7 +67,7 @@ export const projects = [
     desc: "This is a excalidraw clone where uses get an experience similar to that of excalidraw.com, to draw and create diagrams with realtime communication.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project3,
   },
   {
     id: 6,
@@ -68,6 +75,6 @@ export const projects = [
     desc: "Snippet Share is a platfrom where users can share code snippets with each other. Users can copy, share, view, search code snippets.",
     liveLink: "",
     codeLink: "",
-    bgImgLink: "",
+    bgImgLink: project1,
   }
 ]

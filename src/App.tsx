@@ -46,7 +46,7 @@ function App() {
         <Navbar isDark={isDark} toggleDarkMode={handleDarkModeToggle} />
         <Hero isDark={isDark} />
         <Projects />
-        <Skills />
+        <Skills isDark={isDark} />
       </Container>
     </div>
   );

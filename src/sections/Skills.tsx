@@ -1,3 +1,4 @@
+import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
 import { motion } from "motion/react";
 
 const underlineVariants = {
@@ -8,13 +9,15 @@ const underlineVariants = {
   },
 };
 
-const Skills = () => {
+const Skills = ({ isDark }: { isDark: boolean }) => {
   return (
     <div>
       <motion.h2
         initial="initial"
         whileHover="hover"
-        className="text-4xl font-bold uppercase font-space-grotesk relative cursor-pointer text-center w-full text-white"
+        className={`text-4xl font-bold uppercase font-space-grotesk relative cursor-pointer text-center w-full ${
+          isDark ? "text-white" : "text-black"
+        }`}
       >
         <motion.span
           initial={{
@@ -33,6 +36,7 @@ const Skills = () => {
           variants={underlineVariants}
           className="absolute -bottom-1 left-[45%] w-[4rem] rounded-xl h-[5px] bg-green-500 dark:bg-green-400"
         />
+        <div></div>
       </motion.h2>
     </div>
   );

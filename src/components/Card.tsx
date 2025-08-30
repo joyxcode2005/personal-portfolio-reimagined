@@ -48,12 +48,12 @@ const Card = ({
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/50 rounded-lg"></div>
 
       {/* Content container */}
-      <div className="absolute bottom-0 left-0 right-0 p-6">
+      <div className="absolute bottom-0 left-0 right-0 p-2">
         <h3 className="text-white text-2xl font-semibold uppercase font-space-grotesk">
           {title}
         </h3>
         <div className="flex items-end justify-between">
-          <p className="text-white/80 text-sm mt-2 max-w-[80%]">{desc}</p>
+          <p className="text-white/80 text-sm mt-2">{desc}</p>
           <div className="flex items-center gap-3">
             <a
               href={liveLink}

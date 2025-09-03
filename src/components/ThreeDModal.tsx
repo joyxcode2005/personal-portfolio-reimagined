@@ -193,7 +193,13 @@ const ThreeDModal = ({ isDark }: { isDark: boolean }) => {
           <RubiksCube isDark={isDark} />
 
           {/* Subtle camera controls */}
-          <OrbitControls autoRotate={true} autoRotateSpeed={0.5} />
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={0.5}
+            enableZoom={false}
+            enableRotate={false}
+            enablePan={false}
+          />
         </Canvas>
       </div>
     </div>

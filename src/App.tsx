@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Container from "./components/Container";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -47,6 +48,7 @@ function App() {
         <Hero isDark={isDark} />
         <Projects />
         <Skills isDark={isDark} />
+        {/* <Experience isDark={isDark} /> */}
       </Container>
     </div>
   );

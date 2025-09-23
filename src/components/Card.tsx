@@ -28,7 +28,7 @@ const Card = ({
   return (
     <motion.div
       ref={ref}
-      className="relative w-[20rem] h-[25rem] rounded-lg cursor-pointer"
+      className="relative w-[22rem] h-[26rem] rounded-lg cursor-pointer"
       style={{
         backgroundImage: `url(${bgImgLink})`,
         backgroundSize: "cover",

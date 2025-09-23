@@ -6,9 +6,10 @@ import Container from "./components/Container";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const stored = localStorage.getItem("mode");
@@ -48,7 +49,8 @@ function App() {
         <Hero isDark={isDark} />
         <Projects />
         <Skills isDark={isDark} />
-        {/* <Experience isDark={isDark} /> */}
+        <Experience isDark={isDark} />
+        <Contact isDark={isDark} />
       </Container>
     </div>
   );

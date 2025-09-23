@@ -26,14 +26,14 @@ export const titles = [
   "UI/UX Designer",
   "Problem Solver",
   "Creative Thinker",
-]
+];
 
 export const projects = [
   {
     id: 1,
     title: "Algo Judge",
     desc: "AI powered coding contest platform where users can solve problems and they are scored based on time, space complexity and readibility.",
-    liveLink: "",
+    liveLink: "", 
     codeLink: "",
     bgImgLink: project2,
   },
@@ -76,5 +76,29 @@ export const projects = [
     liveLink: "",
     codeLink: "",
     bgImgLink: project1,
-  }
-]
+  },
+];
+
+export const timelineData = [
+  {
+    title: "Software Engineer at TechCorp",
+    date: "Jan 2022 - Present",
+    description:
+      "Developed and maintained web applications using React, Node.js, and TypeScript. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+    tags: ["React", "Node.js", "TypeScript", "AWS"],
+  },
+  {
+    title: "Frontend Developer at Innovate LLC",
+    date: "May 2020 - Dec 2021",
+    description:
+      "Specialized in creating responsive and interactive user interfaces with modern frontend frameworks. Optimized application performance and improved user experience.",
+    tags: ["Vue.js", "Next.js", "GraphQL", "Tailwind CSS"],
+  },
+  {
+    title: "Junior Developer at StartUpX",
+    date: "Jun 2019 - Apr 2020",
+    description:
+      "Gained foundational experience in full-stack development, working on both client-side and server-side features. Contributed to a fast-paced, agile environment.",
+    tags: ["JavaScript", "HTML5", "CSS3", "Firebase"],
+  },
+];

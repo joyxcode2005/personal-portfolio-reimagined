@@ -6,6 +6,7 @@ import project5 from "./assets/projects/project5.png";
 import project6 from "./assets/projects/project6.png";
 
 export const navLinks = ["About", "Snippets", "Contact", "Blogs"];
+
 export const nameElements = [
   "J",
   "o",

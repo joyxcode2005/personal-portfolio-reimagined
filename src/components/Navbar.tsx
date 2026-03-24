@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Container from "./Container";
 import { Link } from "react-router-dom";
 import { BsMoonStars } from "react-icons/bs";
-// import profile_image from "../assets/profile_image.jpg";
+import profile_image from "../assets/profile_image2.png";
 
 interface NavbarProps {
   isDark: boolean;
@@ -57,15 +57,15 @@ const Navbar = ({ isDark, toggleDarkMode }: NavbarProps) => {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="flex justify-end items-center fixed top-0 inset-x-0 mx-auto py-6 bg-white dark:bg-neutral-950 z-50"
+        className="flex justify-between items-center fixed top-0 inset-x-0 mx-auto py-6 bg-white dark:bg-neutral-950 z-50"
       >
-        {/* <img
+        <img
           src={profile_image}
           alt="profile image"
           className="rounded-full"
           width={60}
           height={60}
-        /> */}
+        />
         <div className="flex items-center gap-4 ">
           {/* Desktop nav */}
           <div className="lg:flex items-center hidden">

@@ -59,13 +59,15 @@ const Navbar = ({ isDark, toggleDarkMode }: NavbarProps) => {
         }}
         className="flex justify-between items-center fixed top-0 inset-x-0 mx-auto py-6 bg-white dark:bg-neutral-950 z-50"
       >
-        <img
-          src={profile_image}
-          alt="profile image"
-          className="rounded-full"
-          width={60}
-          height={60}
-        />
+        <a href="#top" aria-label="Scroll to top">
+          <img
+            src={profile_image}
+            alt="profile image"
+            className="rounded-full"
+            width={60}
+            height={60}
+          />
+        </a>
         <div className="flex items-center gap-4 ">
           {/* Desktop nav */}
           <div className="lg:flex items-center hidden">

@@ -1,8 +1,6 @@
-import { useMotionValueEvent, useScroll } from "motion/react";
-import { useRef, useState } from "react";
+import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
-import { motion } from "motion/react";
 
 interface CardProps {
   title: string;
@@ -21,62 +19,119 @@ const Card = ({
   desc,
   idx,
 }: CardProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const [isScrolled, setIsScrolled] = useState(false);
-
   return (
     <motion.div
-      ref={ref}
-      className="relative w-[22rem] h-[26rem] rounded-lg cursor-pointer"
-      style={{
-        backgroundImage: `url(${bgImgLink})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="group relative w-[20rem] h-[26rem] overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 cursor-pointer"
       initial={{
         opacity: 0,
-        y: 10,
+        y: 30,
       }}
-      animate={{
+      whileInView={{
         opacity: 1,
         y: 0,
       }}
-      transition={{ duration: 1.5, delay: 0.2 }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.7,
+        delay: idx * 0.12,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      whileHover={{
+        y: -8,
+      }}
     >
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/50 rounded-lg"></div>
+      {/* Background image */}
+      <motion.img
+        src={bgImgLink}
+        alt={`${title} project preview`}
+        className="absolute inset-0 h-full w-full object-cover"
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.07 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      />
 
-      {/* Content container */}
-      <div className="absolute bottom-0 left-0 right-0 p-2">
-        <h3 className="text-white text-2xl font-semibold uppercase font-space-grotesk">
-          {title}
-        </h3>
-        <div className="flex items-end justify-between">
-          <p className="text-white/80 text-sm mt-2">{desc}</p>
-          <div className="flex items-center gap-3">
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-green-400 hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/10 rotate-y-3"
-              aria-label="View live demo"
-            >
-              <CiLink className="-rotate-45" />
-            </a>
+      {/* Overall subtle darkening */}
+      <div className="absolute inset-0 bg-black/15 transition-colors duration-500 group-hover:bg-black/5" />
 
-            <a
-              href={codeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-green-400 hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/10"
-              aria-label="View source code"
-            >
-              <FaGithub size={20} />
-            </a>
-          </div>
-        </div>
+      {/* Bottom gradient for readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-95" />
+
+      {/* Top gradient */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/40 to-transparent" />
+
+      {/* Project number */}
+      <div className="absolute left-4 top-4 z-10">
+        <span className="rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-md">
+          Project {String(idx + 1).padStart(2, "0")}
+        </span>
       </div>
+
+      {/* External links */}
+      <div className="absolute right-4 top-4 z-20 flex items-center gap-2">
+        {liveLink && (
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${title} live`}
+            onClick={(e) => e.stopPropagation()}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/30 text-white/80 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-white/30 hover:bg-white hover:text-black"
+          >
+            <CiLink className="-rotate-45 text-xl" />
+          </a>
+        )}
+
+        {codeLink && (
+          <a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${title} source code`}
+            onClick={(e) => e.stopPropagation()}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/30 text-white/80 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-white/30 hover:bg-white hover:text-black"
+          >
+            <FaGithub className="text-[17px]" />
+          </a>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-5">
+        <motion.div
+          initial={{ y: 8 }}
+          whileHover={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {/* Title */}
+          <h3 className="font-space-grotesk text-2xl font-semibold uppercase tracking-tight text-white">
+            {title}
+          </h3>
+
+          {/* Description */}
+          <div className="mt-3 rounded-xl border border-white/10 bg-black/25 p-3 backdrop-blur-md">
+            <p className="line-clamp-5 text-sm leading-6 text-white/75">
+              {desc}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Hover border */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl border border-white/0 transition-all duration-500 group-hover:border-white/20" />
+
+      {/* Bottom accent */}
+      <motion.div
+        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-white"
+        initial={{ scaleX: 0 }}
+        whileHover={{ scaleX: 1 }}
+        transition={{ duration: 0.4 }}
+      />
     </motion.div>
   );
 };

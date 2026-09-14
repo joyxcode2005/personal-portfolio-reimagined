@@ -36,7 +36,7 @@ const Projects = () => {
           className="absolute -bottom-1 left-[45%] w-[4rem] rounded-xl h-[5px] bg-green-500 dark:bg-green-400"
         />
       </motion.h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-5 p-10">
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5 px-2 py-6 sm:px-4">
         {projects.map((project) => (
           <Card
             idx={project.id}

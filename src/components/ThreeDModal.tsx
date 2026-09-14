@@ -170,7 +170,7 @@ function RubiksCube({ isDark }: { isDark: boolean }) {
 
 const ThreeDModal = ({ isDark }: { isDark: boolean }) => {
   return (
-    <div className="absolute inset-0 mx-auto pointer-events-none flex items-center">
+    <div className="absolute inset-0 mx-auto pointer-events-auto flex items-center">
       {/* Left side cube container */}
       <div className="w-full h-full absolute inset-0 mx-auto">
         <Canvas
@@ -197,7 +197,7 @@ const ThreeDModal = ({ isDark }: { isDark: boolean }) => {
             autoRotate
             autoRotateSpeed={0.5}
             enableZoom={false}
-            enableRotate={false}
+            enableRotate
             enablePan={false}
           />
         </Canvas>

@@ -1,11 +1,9 @@
-import project1 from "./assets/projects/project1.jpeg";
-import project2 from "./assets/projects/project2.png";
-import project3 from "./assets/projects/project3.png";
-import project4 from "./assets/projects/project4.png";
-import project5 from "./assets/projects/project5.png";
-import project6 from "./assets/projects/project6.png";
+import tutorAI from "./assets/projects/tutor_ai.png";
+import dripduo from "./assets/projects/dripduo.jpeg";
+import technoworldbooks from "./assets/projects/technoworldbooks.png";
+import kdic from "./assets/projects/kdic.png";
 
-export const navLinks = ["About", "Snippets", "Contact", "Blogs"];
+export const navLinks = ["About", "Snippets", "Blogs"];
 
 export const nameElements = [
   "J",
@@ -32,74 +30,105 @@ export const titles = [
 export const projects = [
   {
     id: 1,
-    title: "Algo Judge",
-    desc: "AI powered coding contest platform where users can solve problems and they are scored based on time, space complexity and readibility.",
-    liveLink: "", 
-    codeLink: "",
-    bgImgLink: project2,
+    title: "Quill",
+    desc: "A real-time collaborative whiteboard platform where users can work together, discuss topics, and interact through role-based rooms with editors and spectators. Currently in development with real-time synchronization, AI assistance, activity tracking, voice-session summaries, and live references planned.",
+    liveLink: "",
+    codeLink: "https://github.com/joyxcode2005/Quill.git",
+    bgImgLink: "",
   },
   {
     id: 2,
-    title: "Blogging Website",
-    desc: "This is a blogging website where the backend is based on serverless architecture using hono and primsa + postgress.",
+    title: "Tutor.AI",
+    desc: "An AI-powered personalized learning platform where students can learn, chat, and take quizzes based on their syllabus. Built with a full-stack architecture integrating AI orchestration, vector search, and personalized learning workflows.",
     liveLink: "",
-    codeLink: "",
-    bgImgLink: project5,
+    codeLink: "https://github.com/joyxcode2005/TUTOR-AI.git",
+    bgImgLink: tutorAI,
   },
   {
     id: 3,
-    title: "Tutor AI",
-    desc: "This is a AI tutor platform where students can come and learn, quiz and chat personalized according to their syllabus.",
-    liveLink: "",
-    codeLink: "",
-    bgImgLink: project6,
+    title: "Dripduo",
+    desc: "A full-stack e-commerce platform for a clothing business with an admin panel, order management, payment integration, Google authentication, and map-based functionality. I handled the backend, database, deployment, and contributed to frontend responsiveness and design.",
+    liveLink: "https://dripduo.vercel.app/",
+    codeLink: "https://github.com/joyxcode2005/DRIPDUO.git",
+    bgImgLink: dripduo,
   },
   {
     id: 4,
-    title: "Course Selling Website",
-    desc: "This is a course selling website similar to coursera and udemy. Build using react + express + mongodb.",
-    liveLink: "",
-    codeLink: "",
-    bgImgLink: project4,
+    title: "Techno World Books",
+    desc: "A custom full-stack e-commerce platform with integrated order processing, payments, delivery workflows, and an admin panel. Includes Razorpay, India Post, WhatsApp, SMS, email, image processing, and cloud infrastructure integrations.",
+    liveLink: "https://technoworldbooks.in/",
+    codeLink: "https://github.com/mxsourav/techno-world-books.git",
+    bgImgLink: technoworldbooks,
   },
   {
     id: 5,
-    title: "Excalidraw clone",
-    desc: "This is a excalidraw clone where uses get an experience similar to that of excalidraw.com, to draw and create diagrams with realtime communication.",
-    liveLink: "",
+    title: "KDIC",
+    desc: "A modern institutional website for the Kathakali Debnath Innovation Centre, showcasing innovations, research, centre information, and announcements from the college.",
+    liveLink: "https://www.kdic.org.in/",
     codeLink: "",
-    bgImgLink: project3,
-  },
-  {
-    id: 6,
-    title: "Snippet Sharing Platform",
-    desc: "Snippet Share is a platfrom where users can share code snippets with each other. Users can copy, share, view, search code snippets.",
-    liveLink: "",
-    codeLink: "",
-    bgImgLink: project1,
+    bgImgLink: kdic,
   },
 ];
 
 export const timelineData = [
   {
-    title: "Software Engineer at TechCorp",
-    date: "Jan 2022 - Present",
+    title: "Full Stack Developer at Techno World Books",
+    date: "Aug 2026 - Present",
     description:
-      "Developed and maintained web applications using React, Node.js, and TypeScript. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-    tags: ["React", "Node.js", "TypeScript", "AWS"],
+      "Building a custom full-stack e-commerce platform with end-to-end ownership across frontend, backend, DevOps, and business integrations. Implementing custom order, payment, processing, and delivery workflows, along with an admin panel, Razorpay payments, India Post integration, WhatsApp and SMS notifications, transactional emails, and cloud infrastructure.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Express",
+      "Prisma",
+      "MySQL",
+      "AWS",
+      "Razorpay",
+      "Cloudinary",
+    ],
   },
   {
-    title: "Frontend Developer at Innovate LLC",
-    date: "May 2020 - Dec 2021",
+    title: "Full Stack Developer at Dripduo",
+    date: "Mar 2026 - Present",
     description:
-      "Specialized in creating responsive and interactive user interfaces with modern frontend frameworks. Optimized application performance and improved user experience.",
-    tags: ["Vue.js", "Next.js", "GraphQL", "Tailwind CSS"],
+      "Co-developed a full-stack e-commerce platform for a clothing business, taking primary ownership of the backend, database architecture, and deployment. Contributed to frontend responsiveness and design while implementing order management, payment integration, Google authentication, maps, and the supporting commerce infrastructure.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Supabase",
+      "Razorpay",
+      "Google APIs",
+    ],
   },
   {
-    title: "Junior Developer at StartUpX",
-    date: "Jun 2019 - Apr 2020",
+    title: "Full Stack Developer at MeghInfoTech",
+    date: "Sep 2025 - May 2026",
     description:
-      "Gained foundational experience in full-stack development, working on both client-side and server-side features. Contributed to a fast-paced, agile environment.",
-    tags: ["JavaScript", "HTML5", "CSS3", "Firebase"],
+      "Worked as a part-time full-stack developer, leading development of the company's landing page from design through implementation alongside another frontend developer. Played an integral role in building Tutor.AI with independent ownership of frontend, backend, databases, schemas, DevOps, and feature implementation while contributing to technical direction and product decisions.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "LangChain",
+      "Pinecone",
+      "Tailwind CSS",
+      "Docker",
+      "AWS",
+    ],
+  },
+  {
+    title: "Frontend Developer at KDIC",
+    date: "Aug 2025 - Dec 2025",
+    description:
+      "Contributed to the frontend development of the Kathakali Debnath Innovation Centre website, a platform showcasing college innovations, research, centre information, and announcements. Built responsive interfaces and helped deliver the project using a modern React-based stack.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Cloudflare Pages",
+    ],
   },
 ];

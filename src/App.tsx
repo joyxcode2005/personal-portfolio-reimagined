@@ -13,10 +13,9 @@ function App() {
 
   useEffect(() => {
     const stored = localStorage.getItem("mode");
-    if (stored === "dark") {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    }
+    const shouldUseDarkMode = stored !== "light";
+    setIsDark(shouldUseDarkMode);
+    document.documentElement.classList.toggle("dark", shouldUseDarkMode);
   }, []);
 
   const handleDarkModeToggle = () => {

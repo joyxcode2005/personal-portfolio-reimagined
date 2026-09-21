@@ -9,6 +9,7 @@ interface CardProps {
   bgImgLink: string;
   desc: string;
   idx: number;
+  status?: string;
 }
 
 const Card = ({
@@ -18,6 +19,7 @@ const Card = ({
   bgImgLink,
   desc,
   idx,
+  status,
 }: CardProps) => {
   return (
     <motion.div
@@ -66,10 +68,16 @@ const Card = ({
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/40 to-transparent" />
 
       {/* Project number */}
-      <div className="absolute left-4 top-4 z-10">
+      <div className="absolute left-4 top-4 z-10 flex items-center gap-2">
         <span className="rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-md">
-          Project {String(idx + 1).padStart(2, "0")}
+          Project {String(idx).padStart(2, "0")}
         </span>
+
+        {status && (
+          <span className="rounded-full border border-amber-300/30 bg-amber-950/60 px-2 py-1 text-[9px] font-medium uppercase tracking-[0.1em] text-amber-100 backdrop-blur-md">
+            In development
+          </span>
+        )}
       </div>
 
       {/* External links */}

@@ -35,6 +35,7 @@ export const projects = [
     liveLink: "",
     codeLink: "https://github.com/joyxcode2005/Quill.git",
     bgImgLink: "",
+    status: "Under development",
   },
   {
     id: 2,
@@ -49,7 +50,7 @@ export const projects = [
     title: "Dripduo",
     desc: "A full-stack e-commerce platform for a clothing business with an admin panel, order management, payment integration, Google authentication, and map-based functionality. I handled the backend, database, deployment, and contributed to frontend responsiveness and design.",
     liveLink: "https://dripduo.vercel.app/",
-    codeLink: "https://github.com/joyxcode2005/DRIPDUO.git",
+    codeLink: "",
     bgImgLink: dripduo,
   },
   {

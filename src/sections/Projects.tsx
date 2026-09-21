@@ -45,6 +45,7 @@ const Projects = () => {
             liveLink={project.liveLink || ""}
             codeLink={project.codeLink || ""}
             bgImgLink={project.bgImgLink || ""}
+            status={project.status}
           />
         ))}
       </div>
